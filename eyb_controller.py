@@ -1,10 +1,16 @@
 import sys
 from PyQt4 import QtCore, QtGui
 
+class MyWindow(QtGui.QWidget):
+    def __init__(self):
+        QtGui.QWidget.__init__(self)
+
+        self.setWindowTitle("Emergency!")
+
 if __name__ == "__main__":
     app = QtGui.QApplication(sys.argv)
-    label = QtGui.QLabel("Hello, World!")
-    label.show()
-    label2 = QtGui.QLabel("Hello 2")
-    label2.show()
+
+    win = MyWindow()
+    win.showFullScreen()
+
     app.exec_()
