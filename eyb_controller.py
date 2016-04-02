@@ -7,7 +7,7 @@ win = None
 
 class MyWindow(QtGui.QMainWindow):
     def __init__(self):
-        QtGui.QMainWindow.__init__(self)
+        QtGui.QMainWindow.__init__(self, None, QtCore.Qt.WindowStaysOnTopHint)
 
         self.centralWidget = QtGui.QWidget(self)
         self.centralWidget.setGeometry(0, 0, 2000, 1500)
