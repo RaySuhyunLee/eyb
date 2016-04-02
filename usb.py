@@ -24,10 +24,10 @@ def start_listen(eyb, callback):
         while is_listen:
             data = eyb.readline()[:-2]
             if data == "on":
-                #callback(True)
+                callback(True)
                 print("On!")
             elif data == "off":
-                #callback(False)
+                callback(False)
                 print("Off!")
 
     th = threading.Thread(target=listen, args=(eyb, callback,))
