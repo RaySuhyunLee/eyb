@@ -19,8 +19,8 @@ class MyWindow(QtGui.QMainWindow):
         p.setColor(QtGui.QPalette.Window, QtGui.QColor(0, 0, 0))
         self.centralWidget.setPalette(p)
         
-def on_press(is_pressed):
-    if is_pressed:
+def on_press(is_on):
+    if not is_on:
         win.hide()
         #QApplication.restoreOverrideCursor()
     else:
